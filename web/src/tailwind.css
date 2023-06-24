@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply text-3xl;
+  }
+
+  p {
+    @apply italic;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply rounded border border-black bg-slate-600 px-4 py-2 active:bg-slate-400;
+  }
+}
