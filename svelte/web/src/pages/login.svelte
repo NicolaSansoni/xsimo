@@ -7,13 +7,16 @@
 
   const schema = z.object({
     name: z.string().nonempty("required"),
-    email: z.string().email().nonempty("required"),
+    email: z.string().email().nonempty(),
   });
 
   function submit(event: SubmitEvent) {
     const data = schema.parse(
       Object.fromEntries(new FormData(event.target as HTMLFormElement))
     );
+
+    console.log(data);
+
     $userStore.name = data.name;
     $userStore.email = data.email;
   }
@@ -34,7 +37,7 @@
     </label>
     <label class="flex justify-between">
       <span>Email</span>
-      <input type="email" name="email" class="text-black" />
+      <input type="text" name="email" class="text-black" />
     </label>
     <button type="submit" class="btn w-64 mx-auto"> Aggiorna utente </button>
   </form>
