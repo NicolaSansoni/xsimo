@@ -1,4 +1,4 @@
-module template/grpc
+module template/proto
 
 go 1.20
 

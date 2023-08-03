@@ -6,7 +6,7 @@ require (
 	github.com/bufbuild/connect-go v1.7.0
 	github.com/rs/cors v1.9.0
 	golang.org/x/net v0.9.0
-	template/grpc v0.0.0
+	template/proto v0.0.0
 )
 
 require (
@@ -14,4 +14,4 @@ require (
 	google.golang.org/protobuf v1.30.0 // indirect
 )
 
-replace template/grpc v0.0.0 => ../proto
+replace template/proto v0.0.0 => ../proto

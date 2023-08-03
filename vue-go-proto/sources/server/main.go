@@ -1,6 +1,6 @@
 package main
 
-import server "hip/server/src"
+import server "template/server/src"
 
 func main() {
 	server.Main()

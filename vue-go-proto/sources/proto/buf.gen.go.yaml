@@ -2,7 +2,7 @@ version: v1
 managed:
   enabled: true
   go_package_prefix:
-    default: template/grpc/dist/go
+    default: template/proto/dist/go
 plugins:
   - plugin: buf.build/protocolbuffers/go
     out: dist/go

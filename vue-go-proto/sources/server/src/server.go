@@ -4,9 +4,9 @@ import (
 	"context"
 	"log"
 	"net/http"
-	"template/grpc/dist/go/src/v1/v1connect"
+	"template/proto/dist/go/src/v1/v1connect"
 
-	v1 "template/grpc/dist/go/src/v1"
+	v1 "template/proto/dist/go/src/v1"
 
 	"github.com/bufbuild/connect-go"
 	"github.com/rs/cors"
