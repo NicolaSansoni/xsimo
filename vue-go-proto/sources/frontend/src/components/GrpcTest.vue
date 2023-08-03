@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { createPromiseClient } from "@bufbuild/connect";
 import { createConnectTransport } from "@bufbuild/connect-web";
-import { TestService } from "@hip/grpc/dist/web/src/v1/services_connect";
+import { TestService } from "@template/grpc/dist/web/src/v1/services_connect";
 import { ref } from "vue";
 
 // The transport defines what type of endpoint we're hitting.

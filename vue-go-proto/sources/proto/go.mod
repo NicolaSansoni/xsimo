@@ -1,4 +1,4 @@
-module hip/grpc
+module template/grpc
 
 go 1.20
 

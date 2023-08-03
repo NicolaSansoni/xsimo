@@ -1,4 +1,4 @@
-module hip/server
+module template/server
 
 go 1.20
 
@@ -6,7 +6,7 @@ require (
 	github.com/bufbuild/connect-go v1.7.0
 	github.com/rs/cors v1.9.0
 	golang.org/x/net v0.9.0
-	hip/grpc v0.0.0
+	template/grpc v0.0.0
 )
 
 require (
@@ -14,4 +14,4 @@ require (
 	google.golang.org/protobuf v1.30.0 // indirect
 )
 
-replace hip/grpc v0.0.0 => ../proto
+replace template/grpc v0.0.0 => ../proto

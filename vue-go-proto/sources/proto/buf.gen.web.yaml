@@ -2,7 +2,7 @@ version: v1
 managed:
   enabled: true
   go_package_prefix:
-    default: hip/grpc
+    default: template/grpc
 plugins:
   - plugin: buf.build/bufbuild/connect-es
     out: dist/web

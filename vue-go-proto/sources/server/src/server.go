@@ -2,10 +2,11 @@ package server
 
 import (
 	"context"
-	v1 "hip/grpc/dist/go/src/v1"
-	"hip/grpc/dist/go/src/v1/v1connect"
 	"log"
 	"net/http"
+	"template/grpc/dist/go/src/v1/v1connect"
+
+	v1 "template/grpc/dist/go/src/v1"
 
 	"github.com/bufbuild/connect-go"
 	"github.com/rs/cors"
