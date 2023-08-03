@@ -1,0 +1,12 @@
+version: v1
+managed:
+  enabled: true
+  go_package_prefix:
+    default: hip/grpc/dist/go
+plugins:
+  - plugin: buf.build/protocolbuffers/go
+    out: dist/go
+    opt: paths=source_relative
+  - plugin: buf.build/bufbuild/connect-go
+    out: dist/go
+    opt: paths=source_relative

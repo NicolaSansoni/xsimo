@@ -1,0 +1,8 @@
+{
+  "name": "@hip/grpc",
+  "version": "0.0.0",
+  "type": "module",
+  "dependencies": {
+    "@bufbuild/protobuf": "^1.2.0"
+  }
+}

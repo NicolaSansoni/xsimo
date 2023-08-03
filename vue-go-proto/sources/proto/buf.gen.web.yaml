@@ -1,0 +1,12 @@
+version: v1
+managed:
+  enabled: true
+  go_package_prefix:
+    default: hip/grpc
+plugins:
+  - plugin: buf.build/bufbuild/connect-es
+    out: dist/web
+    opt: target=ts
+  - plugin: buf.build/bufbuild/es
+    out: dist/web
+    opt: target=ts

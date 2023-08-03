@@ -1,0 +1,28 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $REPOSITORY_URI
+  build:
+    commands:
+      - docker build -t $REPOSITORY_URI:latest .
+      - docker tag $REPOSITORY_URI:latest $REPOSITORY_URI:$CODEBUILD_RESOLVED_SOURCE_VERSION
+
+  post_build:
+    commands:
+      - docker push $REPOSITORY_URI:latest
+      - docker push $REPOSITORY_URI:$CODEBUILD_RESOLVED_SOURCE_VERSION
+      - export imageTag=$CODEBUILD_RESOLVED_SOURCE_VERSION
+      - printf '[{"name":"app","imageUri":"%s"}]' $REPOSITORY_URI:$imageTag > imagedefinitions.json
+
+artifacts:
+  files: imagedefinitions.json
+  secondary-artifacts:
+    imagedefinitions:
+      files: "imagedefinitions.json"
+      name: "imagedefinitions"
+
+env:
+  exported-variables:
+    - imageTag
