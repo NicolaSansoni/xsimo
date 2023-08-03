@@ -4,19 +4,4 @@ package v1;
 
 import "src/v1/messages.proto";
 
-service NodeService {
-  rpc Create(Node) returns (Empty);
-  rpc Delete(UUID) returns (Empty);
-}
-
-service TestService {
-  rpc Test(TestRequest) returns (TestResponse);
-}
-
-message TestRequest {
-  string request = 1;
-}
-
-message TestResponse {
-  string response = 1;
-}
+service TestService { rpc Test(TestRequest) returns (TestResponse); }

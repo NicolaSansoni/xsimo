@@ -2,44 +2,6 @@ syntax = "proto3";
 
 package v1;
 
-message Empty {}
+message TestRequest { string request = 1; }
 
-message UUID { bytes value = 1; }
-
-message Node {
-  UUID id = 1;
-  oneof data {
-    Entity entity = 3;
-    Value value = 4;
-    Joint joint = 5;
-  }
-  repeated UUID links = 2;
-}
-
-message Entity { string name = 1; }
-message Value { string name = 1; }
-message Joint {}
-
-message Link {
-  UUID id = 1;
-  oneof data {
-    Statement statement = 5;
-    RawLink raw = 6;
-  }
-  repeated Node from = 3;
-  repeated Node to = 4;
-}
-
-message RawLink {
-  oneof data {
-    Relationship relationship = 1;
-    Property property = 2;
-    Causal causal = 3;
-  }
-}
-
-message Statement { RawLink data = 1; }
-
-message Relationship {}
-message Property {}
-message Causal {}
+message TestResponse { string response = 1; }
